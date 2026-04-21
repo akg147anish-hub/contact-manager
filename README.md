@@ -17,3 +17,5 @@ A simple React app to manage contacts.
 ```bash
 npm install
 npm start
+## 🌐 Live Demo
+https://contact-manager-murex-three.vercel.app/
