@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 
 function App() {
   const [name, setName] = useState("");
@@ -27,14 +28,7 @@ function App() {
   }
 
   return (
-    <div
-      style={{
-        padding: "30px",
-        fontFamily: "Arial",
-        maxWidth: "500px",
-        margin: "auto",
-      }}
-    >
+   <div className="container">
       <h1>Contact Manager</h1>
 
       {/* FORM */}
@@ -43,28 +37,19 @@ function App() {
           placeholder="Name"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          style={{ padding: "8px", width: "100%", marginBottom: "10px" }}
+          className="input-field"
         />
 
         <input
           placeholder="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          style={{ padding: "8px", width: "100%", marginBottom: "10px" }}
+          className="input-field"
         />
 
-        <button
-          type="submit"
-          style={{
-            padding: "8px 15px",
-            background: "black",
-            color: "white",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Add
-        </button>
+       <button type="submit" className="add-btn">
+  Add
+</button>
       </form>
 
       <br />
@@ -74,7 +59,7 @@ function App() {
         placeholder="Search by name..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{ padding: "8px", width: "100%", marginBottom: "10px" }}
+        className="input-field"
       />
 
       <h2>Contacts</h2>
@@ -85,32 +70,16 @@ function App() {
           c.name.toLowerCase().includes(search.toLowerCase())
         )
         .map((c, index) => (
-          <div
-            key={index}
-            style={{
-              border: "1px solid #ccc",
-              padding: "15px",
-              margin: "10px 0",
-              borderRadius: "8px",
-              background: "#f9f9f9",
-            }}
-          >
+          <div key={index} className="contact-card">
             <p><b>Name:</b> {c.name}</p>
             <p><b>Email:</b> {c.email}</p>
 
-            <button
-              onClick={() => deleteContact(index)}
-              style={{
-                marginTop: "10px",
-                padding: "5px 10px",
-                background: "red",
-                color: "white",
-                border: "none",
-                cursor: "pointer",
-              }}
-            >
-              Delete
-            </button>
+           <button
+  onClick={() => deleteContact(index)}
+  className="delete-btn"
+>
+  Delete
+</button>
           </div>
         ))}
     </div>
