@@ -7,6 +7,10 @@ A simple React app to manage contacts.
 - Delete contact
 - Search contact
 
+## 📸 Screenshot
+
+![Contact Manager](images/contact-manager.png)
+
 ## 🛠 Tech Stack
 - React
 - JavaScript
