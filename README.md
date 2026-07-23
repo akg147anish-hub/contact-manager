@@ -1,6 +1,6 @@
 # Contact Manager App
 
-A simple React app to manage contacts.
+A responsive Contact Manager built using React that allows users to add, search, and delete contacts with a clean and modern user interface.
 
 ## 🚀 Features
 - Add contact
